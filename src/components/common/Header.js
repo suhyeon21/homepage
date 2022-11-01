@@ -1,7 +1,12 @@
 import { Link, NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faDribbble } from '@fortawesome/free-brands-svg-icons';
 
 function Header() {
-	const active = { color: 'aqua' };
+	const active = { color: '#000' };
 	return (
 		<header>
 			<h1>
@@ -11,7 +16,7 @@ function Header() {
 				<ul id='gnb'>
 					<li>
 						<NavLink to='/department' activeStyle={active}>
-							DEPARTMEN
+							DEPARTMENT
 						</NavLink>
 					</li>
 					<li>
@@ -35,9 +40,30 @@ function Header() {
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to='/department' activeStyle={active}>
+						<NavLink to='/members' activeStyle={active}>
 							MEMBERS
 						</NavLink>
+					</li>
+				</ul>
+
+				<ul className='etc'>
+					<li>Privacy policy</li>
+					<li>Terms</li>
+					<li>Impressum</li>
+				</ul>
+
+				<ul className='sns'>
+					<li>
+						<FontAwesomeIcon icon={faTwitter} />
+					</li>
+					<li>
+						<FontAwesomeIcon icon={faGithub} />
+					</li>
+					<li>
+						<FontAwesomeIcon icon={faFacebook} />
+					</li>
+					<li>
+						<FontAwesomeIcon icon={faDribbble} />
 					</li>
 				</ul>
 			</nav>

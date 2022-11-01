@@ -1,0 +1,50 @@
+header {
+	width: 260px;
+	height: 100vh;
+	overflow: hidden;
+	background-color: #f6f6f6;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 32px 32px 28px;
+	z-index: 2;
+	h1 {
+		margin-bottom: 20px;
+	}
+
+	nav {
+		#gnb {
+			margin-bottom: 60px;
+		}
+		#gnb li {
+			margin-bottom: 20px;
+		}
+
+		.etc {
+			&::after {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 1px;
+				background-color: #d7d7d7;
+				margin-top: 50px;
+			}
+
+			li {
+				font-size: 13px;
+				margin-bottom: 10px;
+				color: #777;
+			}
+		}
+
+		.sns {
+			display: flex;
+			margin-top: 8px;
+
+			li {
+				margin-right: 13px;
+				color: #777;
+			}
+		}
+	}
+}

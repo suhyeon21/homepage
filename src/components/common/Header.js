@@ -52,7 +52,7 @@ function Header() {
 					<li>Impressum</li>
 				</ul>
 
-				<ul className='sns'>
+				<ul className='util'>
 					<li>
 						<FontAwesomeIcon icon={faTwitter} />
 					</li>

@@ -1,6 +1,48 @@
-.content {
-	margin-left: 260px;
-}
-.title {
-	text-transform: capitalize;
+.container {
+	display: flex;
+	transition: 0.3s;
+
+	&.on {
+		.title-box {
+			left: 260px;
+		}
+	}
+
+	.title-box {
+		position: fixed;
+		top: 0;
+		left: 0;
+		border-right: 1px solid #f2f34f;
+		background: #fff;
+		padding: 30px;
+		width: 300px;
+		flex-shrink: 0;
+		transition: 0.3s;
+
+		h1 {
+			text-transform: capitalize;
+			@include font($fs: 14px, $lh: 1.2);
+			font-weight: 600;
+			margin-bottom: 64px;
+			color: #03afff;
+		}
+
+		h2 {
+			@include font($fs: 36px, $lh: 1.2);
+			margin-bottom: 40px;
+			font-weight: 300;
+		}
+
+		p {
+			@include font($fs: 13px, $lh: 1.6);
+			font-weight: 300;
+		}
+	}
+	.content {
+		position: relative;
+		top: -100%;
+		margin-left: (260 + 300) px; //nav-width와 subtitle-width
+		padding: 32px;
+		transition: 0.2s 0.3s;
+	}
 }

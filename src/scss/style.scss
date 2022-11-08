@@ -1,3 +1,9 @@
+//mixins
+@import 'mixins/typo';
+@import 'mixins/object-fit';
+@import 'mixins/flex';
+@import 'mixins/hover';
+
 //common
 @import 'common/reset';
 @import 'common/header';

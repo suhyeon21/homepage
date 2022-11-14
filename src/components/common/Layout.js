@@ -23,9 +23,8 @@ function Layout({ name, children, sub }) {
 				<p>{sub.p}</p>
 			</div>
 
-			<div className='content'>
-				{children}
-				<Footer />
+			<div className='content-wrap'>
+				<div className='content'>{children}</div>
 			</div>
 		</section>
 	);

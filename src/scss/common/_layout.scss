@@ -1,10 +1,16 @@
 .container {
 	display: flex;
+	flex-grow: 1;
 	transition: 0.3s;
 
 	&.on {
 		.title-box {
 			left: 260px;
+		}
+
+		.content-wrap {
+			width: 100%;
+			left: 560px; //260+300
 		}
 	}
 
@@ -12,12 +18,18 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		border-right: 1px solid #f2f34f;
-		background: #fff;
+		border-right: 1px solid rgb(235, 234, 234);
+
+		background: rgba(255, 255, 255, 0.8);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+
 		padding: 30px;
 		width: 300px;
+		height: 100vh;
 		flex-shrink: 0;
-		transition: 0.3s;
+		z-index: 2;
+		transition: 0.5s;
 
 		h1 {
 			text-transform: capitalize;
@@ -37,12 +49,23 @@
 			@include font($fs: 13px, $lh: 1.6);
 			font-weight: 300;
 		}
+		.badge-num {
+			@include font(14px, 20px);
+			position: absolute;
+			top: -6px;
+			right: 17px;
+		}
 	}
-	.content {
+
+	.content-wrap {
 		position: relative;
-		top: -100%;
-		margin-left: (260 + 300) px; //nav-width와 subtitle-width
-		padding: 32px;
-		transition: 0.2s 0.3s;
+		top: 0;
+		left: -100%;
+		margin-left: (260 +300) px;
+		transition: 0.8s 0.4s;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100vh;
 	}
 }

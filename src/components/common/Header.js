@@ -10,7 +10,10 @@ function Header() {
 	return (
 		<header>
 			<h1>
-				<Link to='/'>LOGO</Link>
+				<Link to='/'>
+					<img src={process.env.PUBLIC_URL + '/img/logo.png'} alt='logo' />
+					{/* <span>COFFEE</span> */}
+				</Link>
 			</h1>
 			<nav>
 				<ul id='gnb'>

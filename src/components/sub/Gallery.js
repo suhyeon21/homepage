@@ -1,9 +1,13 @@
 import Layout from '../common/Layout';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import Masonry from 'react-masonry-component';
 
 function Gallery() {
 	const [Items, setItems] = useState([]);
+	const masonryOptions = {
+		transitionDuration: '0.5s',
+	};
 
 	const getFlickr = async () => {
 		const key = '5f93204b89f778b6700e782d390ca6ea';
@@ -36,17 +40,25 @@ function Gallery() {
 
 	return (
 		<Layout name='gallery' sub={subtitle}>
-			<div>
-				{Items.map((item, i) => {
-					return (
-						<div>
-							<img
-								src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`}
-								alt={item.title}
-							/>
-						</div>
-					);
-				})}
+			<div className='frame'>
+				<Masonry
+					elementType={'div'}
+					options={masonryOptions}
+					columns={2}
+					spacing={0}>
+					{Items.map((item, i) => {
+						return (
+							<article>
+								<div className='inner'>
+									<img
+										src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`}
+										alt={item.title}
+									/>
+								</div>
+							</article>
+						);
+					})}
+				</Masonry>
 			</div>
 		</Layout>
 	);

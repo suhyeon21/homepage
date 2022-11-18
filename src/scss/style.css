@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins";
+  box-sizing: border-box;
+  font-weight: 400;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 260px;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #fdfbf7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 32px 32px 28px;
+  z-index: 2;
+}
+header h1 {
+  position: relative;
+  left: -30px;
+}
+header h1 img {
+  width: 100px;
+  height: 100px;
+}
+header nav #gnb {
+  margin-bottom: 60px;
+}
+header nav #gnb::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 1px;
+  background: #555;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transition: 0.5s;
+}
+header nav #gnb li {
+  margin-bottom: 20px;
+}
+header nav #gnb li a {
+  line-height: 1.2;
+  font-size: 1.1em;
+  background-image: linear-gradient(transparent calc(100% - 3px), #000 3px);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size 0.8s;
+  color: #000;
+  cursor: pointer;
+  background-image: linear-gradient(transparent 60%, #4cc2e7 40%);
+}
+header nav #gnb li a:hover {
+  background-size: 100% 100%;
+}
+header nav .etc::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #d7d7d7;
+  margin-top: 50px;
+}
+header nav .etc li {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #777;
+}
+header nav .sns {
+  display: flex;
+  margin-top: 8px;
+}
+header nav .sns li {
+  margin-right: 13px;
+  color: #777;
+}
+
+.container {
+  display: flex;
+  flex-grow: 1;
+  transition: 0.3s;
+}
+.container.on .title-box {
+  left: 260px;
+}
+.container.on .content-wrap {
+  width: 100%;
+  left: 560px;
+}
+.container.out .title-box {
+  left: -260px;
+  z-index: -100;
+  transition: 0.8s;
+}
+.container.out .content-wrap {
+  width: 100%;
+  left: 260px;
+  transition: 0.8s;
+}
+.container .title-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-right: 1px solid rgb(235, 234, 234);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 30px;
+  width: 300px;
+  height: 100vh;
+  flex-shrink: 0;
+  z-index: 2;
+  transition: 0.5s;
+}
+.container .title-box button {
+  position: relative;
+  left: 240px;
+  top: -20px;
+  border: none;
+  background: none;
+}
+.container .title-box button:nth-of-type(1) {
+  color: #4cc2e7;
+  font-size: 15px;
+}
+.container .title-box h1 {
+  text-transform: capitalize;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 64px;
+  color: #4cc2e7;
+}
+.container .title-box h2 {
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+.container .title-box p {
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+.container .title-box .badge-num {
+  font-size: 14px;
+  line-height: 20px;
+  position: absolute;
+  top: -6px;
+  right: 17px;
+}
+.container .content-wrap {
+  position: relative;
+  top: 0;
+  left: -100%;
+  transition: 0.8s 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.department .content {
+  display: flex;
+}
+.department .member-item .member-thum {
+  width: 400px;
+  height: 320px;
+}
+.department .member-item .member-thum img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.department .member-item .member-info {
+  padding: 32px;
+}
+.department .member-item .member-info .name {
+  font-size: 16px;
+  line-height: 1;
+  display: block;
+}
+.department .member-item .member-info .position {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1;
+  color: #777;
+  margin-bottom: 32px;
+}
+.department .member-item .member-info p {
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.gallery .frame::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.gallery .frame article {
+  width: 20%;
+  float: left;
+}
+.gallery .frame article .inner {
+  width: 100%;
+  padding: 10px;
+}
+.gallery .frame article .inner img {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

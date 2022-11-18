@@ -5,6 +5,7 @@ import Masonry from 'react-masonry-component';
 
 function Gallery() {
 	const [Items, setItems] = useState([]);
+	// const [Index, setIndex] = useState(0);
 	const masonryOptions = {
 		transitionDuration: '0.5s',
 	};
@@ -22,10 +23,10 @@ function Gallery() {
 		const url = `https://www.flickr.com/services/rest/?method=${method_favs}&api_key=${key}&per_page=${num}&format=json&nojsoncallback=1&user_id=${user}`;
 
 		await axios.get(url).then((json) => {
-			console.log(json);
 			if (json.data.photos.photo.length === 0)
 				return alert('해당 검색어의 결과값이 없습니다.');
 			setItems(json.data.photos.photo);
+			console.log(Items);
 		});
 	};
 
@@ -38,8 +39,19 @@ function Gallery() {
 		p: 'Lorem ipsum dolor sit amet.',
 	};
 
+	// const imageClick = (i) => {
+	// 	return (
+	// 		<img
+	// 			src={`https://live.staticflickr.com/${Items[i].server}/${Items[i].id}_${Items[i].secret}_m.jpg`}
+	// 			alt={Items[i].title}
+	// 			onClick={setIndex(i)}
+	// 		/>
+	// 	);
+	// };
+
 	return (
 		<Layout name='gallery' sub={subtitle}>
+			{/* <article>{imageClick(Index)}</article> */}
 			<div className='frame'>
 				<Masonry
 					elementType={'div'}
@@ -53,6 +65,7 @@ function Gallery() {
 									<img
 										src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`}
 										alt={item.title}
+										// onClick={setIndex(i)}
 									/>
 								</div>
 							</article>

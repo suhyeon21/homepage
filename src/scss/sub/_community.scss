@@ -1,12 +1,13 @@
 .community {
+	overflow: hidden;
 	.content {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(2, 340px);
 	}
 
 	.board-input {
 		padding: 56px 32px;
-		border-right: 1px solid rgb(203, 203, 203);
+		border-right: 1px solid rgb(230, 229, 229);
 		height: 100vh;
 
 		&-top {
@@ -30,7 +31,7 @@
 			.input-item {
 				input {
 					width: 100%;
-					border: 1px solid rgb(203, 203, 203);
+					border: 1px solid rgb(230, 229, 229);
 					border-radius: 4px;
 					padding: 12px 20px;
 					margin-bottom: 12px;
@@ -41,7 +42,7 @@
 					min-height: 200px;
 					@include font(13px);
 					font-weight: 200;
-					border: 1px solid rgb(203, 203, 203);
+					border: 1px solid rgb(230, 229, 229);
 					border-radius: 4px;
 					padding: 14px 20px;
 				}
@@ -60,10 +61,16 @@
 				color: #fff;
 				height: 56px;
 				border-radius: 4px;
+				transition: 0.2s;
+				border: none;
 
 				&:nth-of-type(1) {
 					background-color: #f6f6f6;
 					color: #000;
+				}
+
+				&:hover {
+					text-decoration: underline;
 				}
 			}
 		}
@@ -74,7 +81,7 @@
 
 		.board-list {
 			.board-item {
-				border-bottom: 1px solid rgb(203, 203, 203);
+				border-bottom: 1px solid rgb(230, 229, 229);
 				padding-bottom: 12px;
 				position: relative;
 				margin-bottom: 20px;
@@ -100,9 +107,60 @@
 					button {
 						color: #777;
 						cursor: pointer;
+						background: none;
+						transition: 0.2s;
+						width: 28px;
+						height: 28px;
+						border-radius: 10px;
+						border: none;
+						@include font(13px, 28px);
+						text-align: center;
+						margin-right: 5px;
+						&:hover {
+							&:nth-of-type(1) {
+								background-color: #f0eeee;
+								color: #000;
+							}
+							&:nth-of-type(2) {
+								background-color: rgba($color: #ff4800, $alpha: 0.1);
+								color: #ff4800;
+							}
+						}
+					}
+				}
+			}
+
+			.input-edit-list {
+				padding-right: 56px;
+				position: relative;
+
+				input {
+					margin-bottom: 4px;
+				}
+
+				input,
+				textarea {
+					width: 100%;
+					border: 1px solid rgb(230, 229, 229);
+					border-radius: 4px;
+					font-weight: 300;
+					padding: 4px 8px;
+					@include font(13px, 1.5);
+				}
+
+				.btns-edit {
+					position: absolute;
+					right: 0;
+					top: 0;
+
+					button {
+						@include font(19px);
+						color: $blue;
+						transition: 0.2;
 
 						&:nth-of-type(1) {
-							margin-right: 12px;
+							margin-right: 6px;
+							color: #999;
 						}
 					}
 				}

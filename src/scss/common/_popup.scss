@@ -1,0 +1,50 @@
+.pop {
+	position: fixed;
+	top: 0;
+	left: $nav-width + $subtitle-width;
+	z-index: 10;
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	width: calc(100vw - ($nav-width + $subtitle-width));
+
+	height: 100vh;
+	padding: 4vw 8vw;
+	background: rgba(0, 0, 0, 0.9);
+	transition: height 1s;
+	gap: 16px;
+
+	.video {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		order: 2;
+
+		iframe {
+			@include object-fit;
+		}
+	}
+	.btn-close {
+		position: relative;
+		display: block;
+		order: 1;
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		background: none;
+		border: none;
+
+		span {
+			@include font(13px);
+			color: #fff;
+
+			transition: 0.3s 0.15s;
+		}
+	}
+
+	.btn-close:hover {
+		span {
+			text-decoration: underline;
+			opacity: 1;
+		}
+	}
+}

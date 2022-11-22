@@ -8,8 +8,8 @@ import { useEffect, useRef, useState } from 'react';
 
 function Community() {
 	const subtitle = {
-		title: 'FIFA Community',
-		p: 'Explore, discuss, and co-create the products and practices that will take you and your team to the next level with Atlassian Community.',
+		title: 'Our Community',
+		p: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptas ut dolores quidem mollitia id nemo eius sequi sint repudiandae.',
 	};
 
 	const inputTitle = useRef(null);

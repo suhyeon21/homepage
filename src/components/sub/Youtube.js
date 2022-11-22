@@ -11,7 +11,7 @@ function Youtube() {
 	const [Index, setIndex] = useState(0);
 
 	const subtitle = {
-		title: 'fifa youtube',
+		title: "Let's Learn",
 		p: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quos hic suscipit reiciendis debitis repellendus cupiditate corrupti ipsam magni qui!',
 	};
 

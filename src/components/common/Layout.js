@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import Footer from './Footer';
+
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

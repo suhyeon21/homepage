@@ -1,0 +1,46 @@
+{
+  "shops": [
+    {
+      "name": "Snowdrift Mug",
+      "img": "shop1.webp",
+      "hover": "shop1-hover.jpg",
+      "comment": "'Add our beloved Snowdrift Mug to your collection. The slanted walls of our iconic Blue Bottle mug are dip-dyed by hand in Japan, giving the mug a tactile component between the layer of glaze and the pristine porcelain.'"
+    },
+    {
+      "name": "Giant Steps",
+      "img": "shop2.webp",
+      "hover": "shop2-hover.webp",
+      "comment": "'Giant Steps is a coffee whose chocolate notes ring constant from the first taste to the last. Straightforward and bold, this dark roast coffee wins you over with its uncomplicated comforting taste. '"
+    },
+    {
+      "name": "Instant Espresso Multiserve",
+      "img": "shop3.webp",
+      "hover": "shop3-hover.jpg",
+      "comment": "'Make heavenly iced or hot lattes in seconds, anywhere life leads you. At home, your in-laws, an Airbnb getaway—whenever you crave a Blue Bottle cafe-quality espresso drink. '"
+    },
+    {
+      "name": "Blue Bottle Dripper with Blue Bottle Coffee Filters",
+      "img": "shop4.webp",
+      "hover": "shop4-hover.webp",
+      "comment": "'We teamed up with scientists and engineers to create an entirely new dripper system that tells the coffee where and how to flow for the most delicious pour over imaginable.'"
+    },
+    {
+      "name": "Blue Bottle x Cavern New York Origin Candle",
+      "img": "shop5.webp",
+      "hover": "shop5-hover.webp",
+      "comment": "In collaboration with Brooklyn-based fragrance studio Cavern New York, we created our first-ever candle for a new way to engage the world of coffee with your senses. "
+    },
+    {
+      "name": "Akihiro Woodworks Jincup Urushi",
+      "img": "shop6.webp",
+      "hover": "shop6-hover.jpg",
+      "comment": "In Kagoshima, a seaside city in Japan, Jin Akihiro and his brother are making art through sustainability and craftsmanship. Each Akihiro Woodworks Jincup Urushi is completely unique, as they are carved by the Akihiro family from tabunoki wood. "
+    },
+    {
+      "name": "Winter Coffee Set",
+      "img": "shop7.webp",
+      "hover": "shop7-hover.webp",
+      "comment": "We brought our winter coffees together to give you the warmth and joy we love in this season. The Winter Blend is a cozy coffee that envelops you in sweet flavors of dark chocolate and molasses. "
+    }
+  ]
+}

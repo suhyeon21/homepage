@@ -5,7 +5,7 @@ import Masonry from 'react-masonry-component';
 
 function Gallery() {
 	const [Items, setItems] = useState([]);
-	// const [Index, setIndex] = useState(0);
+	const [Index, setIndex] = useState(0);
 	const masonryOptions = {
 		transitionDuration: '0.5s',
 	};
@@ -14,7 +14,7 @@ function Gallery() {
 		const key = '5f93204b89f778b6700e782d390ca6ea';
 		const user = '196184841@N06';
 		const num = 200;
-		// const extras = 'tags, description, views';
+		const extras = 'tags, description, views';
 		const method_search = 'flickr.photos.search';
 		const method_interest = 'flickr.interestingness.getList';
 		const method_user = 'flickr.people.getPhotos';
@@ -35,23 +35,23 @@ function Gallery() {
 	}, []);
 
 	const subtitle = {
-		title: 'Work Life',
-		p: 'Lorem ipsum dolor sit amet.',
+		title: '#Bluebottle',
+		p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
 	};
 
 	// const imageClick = (i) => {
+
 	// 	return (
 	// 		<img
-	// 			src={`https://live.staticflickr.com/${Items[i].server}/${Items[i].id}_${Items[i].secret}_m.jpg`}
-	// 			alt={Items[i].title}
-	// 			onClick={setIndex(i)}
+	// 			src={`https://live.staticflickr.com/${Items[0].server}/${Items[0].id}_${Items[0].secret}_m.jpg`}
+	// 			alt={Items[0].title}
 	// 		/>
 	// 	);
 	// };
 
 	return (
 		<Layout name='gallery' sub={subtitle}>
-			{/* <article>{imageClick(Index)}</article> */}
+			{/* <article>{imageClick}</article> */}
 			<div className='frame'>
 				<Masonry
 					elementType={'div'}
@@ -62,10 +62,13 @@ function Gallery() {
 						return (
 							<article>
 								<div className='inner'>
+									{console.log(item)}
 									<img
 										src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`}
 										alt={item.title}
-										// onClick={setIndex(i)}
+										// onClick={() => {
+										// 	setIndex(i);
+										// }} //무한루프 해결
 									/>
 								</div>
 							</article>

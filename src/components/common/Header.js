@@ -18,8 +18,8 @@ function Header() {
 			<nav>
 				<ul id='gnb'>
 					<li>
-						<NavLink to='/department' activeStyle={active}>
-							DEPARTMENT
+						<NavLink to='/shop' activeStyle={active}>
+							SHOP
 						</NavLink>
 					</li>
 					<li>
@@ -40,11 +40,6 @@ function Header() {
 					<li>
 						<NavLink to='/location' activeStyle={active}>
 							LOCATION
-						</NavLink>
-					</li>
-					<li>
-						<NavLink to='/members' activeStyle={active}>
-							MEMBERS
 						</NavLink>
 					</li>
 				</ul>

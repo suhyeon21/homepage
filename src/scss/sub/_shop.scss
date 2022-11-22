@@ -1,0 +1,49 @@
+.shop {
+	.content {
+		display: flex;
+	}
+
+	.member-item {
+		background: #fbfbfb;
+		margin-right: 12px;
+
+		.member-thum {
+			width: 400px;
+			height: 360px;
+			margin-left: 10px;
+			// background: #fbfbfb;
+			// transition: 0.2s;
+
+			img {
+				@include object-fit;
+
+				// &on {
+				// 	transition: 0.8s;
+				// }
+			}
+		}
+
+		.member-info {
+			// background: #fbfbfb;
+
+			padding: 32px;
+
+			.name {
+				@include font(16px);
+				display: block;
+			}
+
+			.position {
+				display: inline-block;
+				@include font(12px);
+				color: #777;
+				margin-bottom: 32px;
+			}
+
+			p {
+				@include font(14px, 1.6);
+				font-weight: 300;
+			}
+		}
+	}
+}

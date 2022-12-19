@@ -14,8 +14,17 @@ import Location from './components/sub/Location';
 import Members from './components/sub/Members';
 import Youtube from './components/sub/Youtube';
 import './scss/style.scss';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchYoutube } from './redux/youtubeSlice';
 
 function App() {
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(fetchYoutube());
+	}, []);
+
 	return (
 		<>
 			<Route exact path='/'>

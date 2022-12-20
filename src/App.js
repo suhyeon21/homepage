@@ -17,12 +17,14 @@ import './scss/style.scss';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchYoutube } from './redux/youtubeSlice';
+import { fetchFlickr } from './redux/flickrSlice';
 
 function App() {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
 		dispatch(fetchYoutube());
+		dispatch(fetchFlickr());
 	}, []);
 
 	return (

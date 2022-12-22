@@ -12,7 +12,7 @@ function Youtube() {
 	const [Index, setIndex] = useState(0);
 	const Vids = useSelector((state) => state.youtube.data);
 
-	console.log(Vids);
+	// console.log(Vids);
 
 	const subtitle = {
 		title: "Let's Learn",

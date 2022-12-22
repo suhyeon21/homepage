@@ -18,6 +18,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchYoutube } from './redux/youtubeSlice';
 import { fetchFlickr } from './redux/flickrSlice';
+import { fetchProduct } from './redux/productSlice';
 
 function App() {
 	const dispatch = useDispatch();
@@ -25,6 +26,7 @@ function App() {
 	useEffect(() => {
 		dispatch(fetchYoutube());
 		dispatch(fetchFlickr());
+		dispatch(fetchProduct());
 	}, []);
 
 	return (

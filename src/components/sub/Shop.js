@@ -1,24 +1,28 @@
 import Layout from '../common/Layout';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useSelector } from 'react-redux';
 
 function Shop() {
-	const [shops, setshops] = useState([]);
+	// const [shops, setshops] = useState([]);
 	const [isHover, setisHover] = useState(false);
+	const Shops = useSelector((store) => store.product.data);
 
 	const subtitle = {
 		title: 'Made for Special Moment',
 		p: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, iste.',
 	};
 
-	useEffect(() => {
-		axios.get(process.env.PUBLIC_URL + '/DB/shops.json').then((json) => {
-			setshops(json.data.shops);
-		});
-	}, []);
+	console.log(Shops);
+
+	// useEffect(() => {
+	// 	axios.get(process.env.PUBLIC_URL + '/DB/shops.json').then((json) => {
+	// 		setshops(json.data.shops);
+	// 	});
+	// }, []);
 	return (
 		<Layout name='shop' sub={subtitle}>
-			{shops.map((shop, i) => {
+			{Shops.map((shop, i) => {
 				function over(e) {
 					e.currentTarget.src = `${process.env.PUBLIC_URL}/img/${shop.hover}`;
 					// e.currentTarget.classList.add('on');

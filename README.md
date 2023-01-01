@@ -10,7 +10,7 @@
 # 실행 방법
 
 ```bash
-$ git clone https://github.com/djshinnn/seSoccer-api.git
+$ git clone https://github.com/suhyeon21/react-homepage.git
 ```
 ```bash
 $ npm install
@@ -24,10 +24,10 @@ $ npm start
 # 프로젝트 소개
 
 <div align="center">
-			<img src={process.env.PUBLIC_URL + '/img/logo.png'} alt='logo' width='300'/>
+			<img src="public/img/logo.png" alt='logo' width='300'/>
 <br>
 <p>
-  <b>리액트로 만든 블루보틀 홈페이지 입니다.</b>
+  리액트로 만든 <b> 블루보틀 홈페이지</b> 입니다.
 	<br/>
 	리액트 공부 후 평소 좋아하던 카페의 홈페이지를 만들어 보았습니다.
   <br/>

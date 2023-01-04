@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 
 function Youtube() {
 	// const [Videos, setVideos] = useState([]);
-	// const [Open, setOpen] = useState(false);
+	const [Open, setOpen] = useState(false);
 	const [Index, setIndex] = useState(0);
 	const Vids = useSelector((state) => state.youtube.data);
 
@@ -27,7 +27,7 @@ function Youtube() {
 						<article
 							key={i}
 							onClick={() => {
-								// setOpen(true);
+								setOpen(true);
 								setIndex(i);
 							}}>
 							<div className='icon'>
@@ -43,16 +43,16 @@ function Youtube() {
 						</article>
 					);
 				})}
-				{/* 보류 코드 */}
-				{/* {Open && (
+
+				{Open && (
 					<Popup close={setOpen}>
 						<div className='video'>
 							<iframe
-								src={`https://www.youtube.com/embed/${Videos[Index].snippet.resourceId.videoId}`}
+								src={`https://www.youtube.com/embed/${Vids[Index].snippet.resourceId.videoId}`}
 								frameBorder='0'></iframe>
 						</div>
 					</Popup>
-				)} */}
+				)}
 			</Layout>
 		</>
 	);

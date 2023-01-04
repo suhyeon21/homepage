@@ -4,25 +4,26 @@ $nav-width: 260px;
 $subtitle-width: 300px;
 
 //mixins
-@import 'mixins/typo';
-@import 'mixins/object-fit';
-@import 'mixins/flex';
-@import 'mixins/hover';
+@import "mixins/typo";
+@import "mixins/object-fit";
+@import "mixins/flex";
+@import "mixins/hover";
 
 //common
-@import 'common/reset';
-@import 'common/header';
-@import 'common/footer';
-@import 'common/layout';
-@import 'common/popup';
+@import "common/reset";
+@import "common/header";
+@import "common/footer";
+@import "common/layout";
+@import "common/popup";
 
 //main
-@import 'main/visual';
+@import "main/visual";
 
 //sub
-@import 'sub/shop';
-@import 'sub/community';
-@import 'sub/gallery';
-@import 'sub/youtube';
-@import 'sub/location';
-@import 'sub/members';
+@import "sub/shop";
+@import "sub/community";
+@import "sub/gallery";
+@import "sub/youtube";
+@import "sub/location";
+
+@import "sub/members";

@@ -1,8 +1,8 @@
 {
-  "homepage": "https: //suhyeon21.github.io/react-homepage",
   "name": "test",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
